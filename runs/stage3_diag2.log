@@ -1,0 +1,49 @@
+[A: b4+module_dropout 0.3 (anti lazy-fusion)]
+  core cache built [14s]
+  ep  5 iid=0.497 comp_attr=0.489 comp_tmpl=0.462 extrap=0.443 [333s]
+  ep 10 iid=0.501 comp_attr=0.483 comp_tmpl=0.461 extrap=0.449 [710s]
+  ep 15 iid=0.504 comp_attr=0.481 comp_tmpl=0.460 extrap=0.440 [1188s]
+  ep 20 iid=0.504 comp_attr=0.484 comp_tmpl=0.457 extrap=0.444 [1696s]
+  ep 25 iid=0.509 comp_attr=0.475 comp_tmpl=0.452 extrap=0.439 [2116s]
+  ep 30 iid=0.508 comp_attr=0.482 comp_tmpl=0.452 extrap=0.441 [2561s]
+  damage iid: {'none': 0.508, 'A_perceiver': 0.508, 'B_reasoner': 0.435, 'C_interpreter': 0.503}
+[B: b4.5 finetune from b4_s0]
+Traceback (most recent call last):
+  File "/Users/mv/Desktop/THASCAB/scripts/run_union_cfg.py", line 41, in <module>
+    u, final, cache = UT.train_union(
+                      ~~~~~~~~~~~~~~^
+        splits, args.name, seed=args.seed, regime=args.regime, K=args.K, R=args.R,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        init_bridge_from=args.init_from, eval_every=args.eval_every,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        use_cache=use_cache, ckpt_hook=hook)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mv/Desktop/THASCAB/thascab/union_train.py", line 169, in train_union
+    loss.backward()
+    ~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/_tensor.py", line 631, in backward
+    torch.autograd.backward(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        self, gradient, retain_graph, create_graph, inputs=inputs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/autograd/__init__.py", line 379, in backward
+    _engine_run_backward(
+    ~~~~~~~~~~~~~~~~~~~~^
+        tensors,
+        ^^^^^^^^
+    ...<5 lines>...
+        accumulate_grad=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/torch/autograd/graph.py", line 882, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        t_outputs, *args, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )  # Calls into the C++ engine to run the backward pass
+    ^
+RuntimeError: MPS backend out of memory (MPS allocated: 4.27 GiB, other allocations: 7.54 GiB, max allowed: 11.84 GiB). Tried to allocate 32.00 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).

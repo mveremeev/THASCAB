@@ -1,0 +1,255 @@
+[driver 01:04:45] waiting for diag2c ladder to finish...
+[driver 19:07:11] ladder done
+[driver 19:07:11] cand K=8 R=3: iid=0.506
+[driver 19:07:11] cand K=8 R=5: iid=0.503
+[driver 19:07:11] cand K=16 R=3: iid=0.504
+[driver 19:07:11] chosen config: K=8 R=3
+[driver 19:07:11] skip b4_s0 (done)
+[driver 19:07:11] RUN python3 scripts/run_union_cfg.py --name b4_s1 --K 8 --R 3 --seed 1 --epochs 25 --damage
+  core cache built [17s]
+  ep  5 iid=0.495 comp_attr=0.478 comp_tmpl=0.452 extrap=0.409 [284s]
+  ep 10 iid=0.496 comp_attr=0.492 comp_tmpl=0.464 extrap=0.441 [613s]
+  ep 15 iid=0.514 comp_attr=0.479 comp_tmpl=0.446 extrap=0.446 [988s]
+  ep 20 iid=0.510 comp_attr=0.475 comp_tmpl=0.438 extrap=0.422 [1337s]
+  ep 25 iid=0.503 comp_attr=0.479 comp_tmpl=0.440 extrap=0.423 [1686s]
+  damage iid: {'none': 0.503, 'A_perceiver': 0.501, 'B_reasoner': 0.416, 'C_interpreter': 0.492}
+[driver 19:37:13] RUN python3 scripts/run_union_cfg.py --name b4_s2 --K 8 --R 3 --seed 2 --epochs 25 --damage
+  core cache built [20s]
+  ep  5 iid=0.492 comp_attr=0.482 comp_tmpl=0.452 extrap=0.421 [317s]
+  ep 10 iid=0.490 comp_attr=0.481 comp_tmpl=0.439 extrap=0.427 [591s]
+  ep 15 iid=0.495 comp_attr=0.484 comp_tmpl=0.457 extrap=0.433 [919s]
+  ep 20 iid=0.503 comp_attr=0.479 comp_tmpl=0.441 extrap=0.433 [1255s]
+  ep 25 iid=0.499 comp_attr=0.475 comp_tmpl=0.430 extrap=0.428 [1608s]
+  damage iid: {'none': 0.499, 'A_perceiver': 0.498, 'B_reasoner': 0.421, 'C_interpreter': 0.489}
+[driver 20:06:38] RUN python3 scripts/run_union_cfg.py --name b4_s3 --K 8 --R 3 --seed 3 --epochs 25 --damage
+  core cache built [30s]
+  ep  5 iid=0.497 comp_attr=0.491 comp_tmpl=0.467 extrap=0.446 [278s]
+  ep 10 iid=0.500 comp_attr=0.481 comp_tmpl=0.455 extrap=0.453 [565s]
+  ep 15 iid=0.506 comp_attr=0.483 comp_tmpl=0.433 extrap=0.447 [823s]
+  ep 20 iid=0.507 comp_attr=0.475 comp_tmpl=0.435 extrap=0.437 [1121s]
+  ep 25 iid=0.507 comp_attr=0.476 comp_tmpl=0.434 extrap=0.435 [1424s]
+  damage iid: {'none': 0.507, 'A_perceiver': 0.508, 'B_reasoner': 0.416, 'C_interpreter': 0.443}
+[driver 20:32:08] RUN python3 scripts/run_union_cfg.py --name b4_s4 --K 8 --R 3 --seed 4 --epochs 25 --damage
+  core cache built [17s]
+  ep  5 iid=0.498 comp_attr=0.481 comp_tmpl=0.450 extrap=0.438 [276s]
+  ep 10 iid=0.502 comp_attr=0.475 comp_tmpl=0.462 extrap=0.449 [512s]
+  ep 15 iid=0.508 comp_attr=0.480 comp_tmpl=0.452 extrap=0.433 [731s]
+  ep 20 iid=0.506 comp_attr=0.487 comp_tmpl=0.435 extrap=0.443 [948s]
+  ep 25 iid=0.504 comp_attr=0.476 comp_tmpl=0.432 extrap=0.436 [1166s]
+  damage iid: {'none': 0.504, 'A_perceiver': 0.501, 'B_reasoner': 0.418, 'C_interpreter': 0.475}
+[driver 20:52:54] skip b45_s0 (done)
+[driver 20:52:54] RUN python3 scripts/run_union_cfg.py --name b45_s1 --K 8 --R 3 --seed 1 --regime finetune --epochs 10 --lr 3e-4 --bs 64 --init_from runs/b4_s1/model.pt --damage
+  ep  5 iid=0.497 comp_attr=0.477 comp_tmpl=0.450 extrap=0.427 [528s]
+  ep 10 iid=0.496 comp_attr=0.474 comp_tmpl=0.432 extrap=0.431 [1051s]
+  damage iid: {'none': 0.496, 'A_perceiver': 0.497, 'B_reasoner': 0.416, 'C_interpreter': 0.494}
+[driver 21:11:36] RUN python3 scripts/run_union_cfg.py --name b45_s2 --K 8 --R 3 --seed 2 --regime finetune --epochs 10 --lr 3e-4 --bs 64 --init_from runs/b4_s2/model.pt --damage
+  ep  5 iid=0.492 comp_attr=0.477 comp_tmpl=0.429 extrap=0.428 [522s]
+  ep 10 iid=0.493 comp_attr=0.464 comp_tmpl=0.422 extrap=0.435 [1046s]
+  damage iid: {'none': 0.493, 'A_perceiver': 0.495, 'B_reasoner': 0.425, 'C_interpreter': 0.483}
+[driver 21:30:14] RUN python3 scripts/run_union_cfg.py --name b45_s3 --K 8 --R 3 --seed 3 --regime finetune --epochs 10 --lr 3e-4 --bs 64 --init_from runs/b4_s3/model.pt --damage
+  ep  5 iid=0.513 comp_attr=0.490 comp_tmpl=0.455 extrap=0.456 [519s]
+  ep 10 iid=0.513 comp_attr=0.478 comp_tmpl=0.435 extrap=0.437 [1040s]
+  damage iid: {'none': 0.513, 'A_perceiver': 0.515, 'B_reasoner': 0.419, 'C_interpreter': 0.453}
+[driver 21:48:44] RUN python3 scripts/run_union_cfg.py --name b45_s4 --K 8 --R 3 --seed 4 --regime finetune --epochs 10 --lr 3e-4 --bs 64 --init_from runs/b4_s4/model.pt --damage
+  ep  5 iid=0.507 comp_attr=0.487 comp_tmpl=0.449 extrap=0.449 [522s]
+  ep 10 iid=0.502 comp_attr=0.479 comp_tmpl=0.431 extrap=0.447 [1047s]
+  damage iid: {'none': 0.502, 'A_perceiver': 0.503, 'B_reasoner': 0.412, 'C_interpreter': 0.478}
+[driver 22:07:21] RUN python3 scripts/run_union_cfg.py --name b5_s0 --K 8 --R 3 --seed 0 --regime scratch --epochs 15 --lr 1e-3 --bs 64 --damage
+  ep  5 iid=0.407 comp_attr=0.408 comp_tmpl=0.402 extrap=0.381 [521s]
+  ep 10 iid=0.400 comp_attr=0.383 comp_tmpl=0.357 extrap=0.381 [1104s]
+  ep 15 iid=0.412 comp_attr=0.409 comp_tmpl=0.394 extrap=0.383 [1802s]
+  damage iid: {'none': 0.412, 'A_perceiver': 0.392, 'B_reasoner': 0.412, 'C_interpreter': 0.186}
+[driver 22:38:47] RUN python3 scripts/run_union_cfg.py --name b5_s1 --K 8 --R 3 --seed 1 --regime scratch --epochs 15 --lr 1e-3 --bs 64 --damage
+  ep  5 iid=0.379 comp_attr=0.366 comp_tmpl=0.358 extrap=0.344 [683s]
+  ep 10 iid=0.405 comp_attr=0.406 comp_tmpl=0.391 extrap=0.378 [1366s]
+  ep 15 iid=0.415 comp_attr=0.409 comp_tmpl=0.275 extrap=0.385 [2059s]
+  damage iid: {'none': 0.415, 'A_perceiver': 0.406, 'B_reasoner': 0.407, 'C_interpreter': 0.362}
+[driver 23:14:28] RUN python3 scripts/run_union_cfg.py --name b5_s2 --K 8 --R 3 --seed 2 --regime scratch --epochs 15 --lr 1e-3 --bs 64 --damage
+  ep  5 iid=0.405 comp_attr=0.399 comp_tmpl=0.410 extrap=0.372 [705s]
+  ep 10 iid=0.413 comp_attr=0.413 comp_tmpl=0.382 extrap=0.379 [1403s]
+  ep 15 iid=0.423 comp_attr=0.422 comp_tmpl=0.222 extrap=0.388 [2097s]
+  damage iid: {'none': 0.423, 'A_perceiver': 0.423, 'B_reasoner': 0.423, 'C_interpreter': 0.343}
+[driver 23:50:50] RUN python3 scripts/run_union_cfg.py --name b5_s3 --K 8 --R 3 --seed 3 --regime scratch --epochs 15 --lr 1e-3 --bs 64 --damage
+  ep  5 iid=0.404 comp_attr=0.398 comp_tmpl=0.381 extrap=0.379 [689s]
+  ep 10 iid=0.415 comp_attr=0.412 comp_tmpl=0.400 extrap=0.384 [1342s]
+  ep 15 iid=0.424 comp_attr=0.418 comp_tmpl=0.400 extrap=0.398 [1984s]
+  damage iid: {'none': 0.424, 'A_perceiver': 0.426, 'B_reasoner': 0.426, 'C_interpreter': 0.424}
+[driver 00:25:16] RUN python3 scripts/run_union_cfg.py --name b5_s4 --K 8 --R 3 --seed 4 --regime scratch --epochs 15 --lr 1e-3 --bs 64 --damage
+  ep  5 iid=0.220 comp_attr=0.222 comp_tmpl=0.269 extrap=0.199 [697s]
+  ep 10 iid=0.406 comp_attr=0.404 comp_tmpl=0.388 extrap=0.377 [1415s]
+  ep 15 iid=0.413 comp_attr=0.403 comp_tmpl=0.398 extrap=0.382 [2220s]
+  damage iid: {'none': 0.413, 'A_perceiver': 0.412, 'B_reasoner': 0.413, 'C_interpreter': 0.409}
+[driver 01:04:01] RUN stage4_nulls.py
+[B7 ensemble, seed 0]
+  b7(b1ft) s0 gate iid=0.688 avg iid=0.674
+  b7(b1frozen) s0 gate iid=0.688 avg iid=0.674
+[B7 ensemble, seed 1]
+  b7(b1ft) s1 gate iid=0.728 avg iid=0.714
+  b7(b1frozen) s1 gate iid=0.727 avg iid=0.716
+[B7 ensemble, seed 2]
+  b7(b1ft) s2 gate iid=0.721 avg iid=0.711
+  b7(b1frozen) s2 gate iid=0.720 avg iid=0.716
+[B7 ensemble, seed 3]
+  b7(b1ft) s3 gate iid=0.727 avg iid=0.716
+  b7(b1frozen) s3 gate iid=0.726 avg iid=0.717
+[B7 ensemble, seed 4]
+  b7(b1ft) s4 gate iid=0.726 avg iid=0.713
+  b7(b1frozen) s4 gate iid=0.727 avg iid=0.714
+[B8 sweep on seed 0]
+  depth=4 lr=0.0003 params=3.26M
+  ep 12 iid=0.652 comp_attr=0.639 comp_tmpl=0.452 extrap=0.553 [2057s]
+  depth=4 lr=0.0006 params=3.26M
+  ep 12 iid=0.666 comp_attr=0.659 comp_tmpl=0.450 extrap=0.553 [1233s]
+  depth=6 lr=0.0003 params=4.84M
+  ep 12 iid=0.641 comp_attr=0.625 comp_tmpl=0.433 extrap=0.548 [1963s]
+  depth=6 lr=0.0006 params=4.84M
+  ep 12 iid=0.673 comp_attr=0.660 comp_tmpl=0.478 extrap=0.605 [1783s]
+  depth=8 lr=0.0003 params=6.42M
+  ep 12 iid=0.655 comp_attr=0.646 comp_tmpl=0.467 extrap=0.581 [2375s]
+  depth=8 lr=0.0006 params=6.42M
+  ep 12 iid=0.669 comp_attr=0.654 comp_tmpl=0.458 extrap=0.588 [2367s]
+  best config: depth=6 lr=0.0006 (iid=0.673)
+[B8 monolith d=6, seed 0]
+  ep  5 iid=0.535 comp_attr=0.537 comp_tmpl=0.466 extrap=0.438 [756s]
+  ep 10 iid=0.639 comp_attr=0.626 comp_tmpl=0.455 extrap=0.548 [1508s]
+  ep 15 iid=0.686 comp_attr=0.667 comp_tmpl=0.454 extrap=0.576 [2256s]
+  ep 20 iid=0.711 comp_attr=0.694 comp_tmpl=0.450 extrap=0.609 [3003s]
+[B8 monolith d=6, seed 1]
+  ep  5 iid=0.543 comp_attr=0.523 comp_tmpl=0.370 extrap=0.449 [751s]
+  ep 10 iid=0.662 comp_attr=0.650 comp_tmpl=0.449 extrap=0.564 [1501s]
+  ep 15 iid=0.685 comp_attr=0.663 comp_tmpl=0.459 extrap=0.600 [2258s]
+  ep 20 iid=0.682 comp_attr=0.663 comp_tmpl=0.458 extrap=0.598 [3010s]
+[B8 monolith d=6, seed 2]
+  ep  5 iid=0.544 comp_attr=0.535 comp_tmpl=0.447 extrap=0.456 [747s]
+  ep 10 iid=0.671 comp_attr=0.662 comp_tmpl=0.472 extrap=0.536 [1490s]
+  ep 15 iid=0.676 comp_attr=0.663 comp_tmpl=0.461 extrap=0.563 [2235s]
+  ep 20 iid=0.679 comp_attr=0.661 comp_tmpl=0.468 extrap=0.567 [2987s]
+[B8 monolith d=6, seed 3]
+[driver 07:04:01] TIMEOUT stage4_nulls
+[driver 07:04:01] RUN python3 scripts/run_union_cfg.py --name b6_s0 --K 8 --R 3 --seed 0 --epochs 25 --text_bridge --damage
+  core cache built [13s]
+  ep  5 iid=0.364 comp_attr=0.377 comp_tmpl=0.357 extrap=0.355 [211s]
+  ep 10 iid=0.417 comp_attr=0.409 comp_tmpl=0.426 extrap=0.375 [419s]
+  ep 15 iid=0.448 comp_attr=0.432 comp_tmpl=0.457 extrap=0.402 [627s]
+  ep 20 iid=0.478 comp_attr=0.463 comp_tmpl=0.461 extrap=0.434 [835s]
+  ep 25 iid=0.481 comp_attr=0.467 comp_tmpl=0.454 extrap=0.436 [1044s]
+  damage iid: {'none': 0.481, 'A_perceiver': 0.472, 'B_reasoner': 0.406, 'C_interpreter': 0.472}
+[driver 07:22:40] RUN python3 scripts/run_union_cfg.py --name b6_s1 --K 8 --R 3 --seed 1 --epochs 25 --text_bridge --damage
+  core cache built [13s]
+  ep  5 iid=0.231 comp_attr=0.187 comp_tmpl=0.244 extrap=0.251 [210s]
+  ep 10 iid=0.240 comp_attr=0.247 comp_tmpl=0.287 extrap=0.337 [419s]
+  ep 15 iid=0.411 comp_attr=0.394 comp_tmpl=0.408 extrap=0.389 [627s]
+  ep 20 iid=0.476 comp_attr=0.463 comp_tmpl=0.437 extrap=0.414 [836s]
+  ep 25 iid=0.493 comp_attr=0.472 comp_tmpl=0.455 extrap=0.434 [1044s]
+  damage iid: {'none': 0.493, 'A_perceiver': 0.467, 'B_reasoner': 0.385, 'C_interpreter': 0.473}
+[driver 07:41:16] RUN python3 scripts/run_union_cfg.py --name b6_s2 --K 8 --R 3 --seed 2 --epochs 25 --text_bridge --damage
+  core cache built [13s]
+  ep  5 iid=0.462 comp_attr=0.438 comp_tmpl=0.472 extrap=0.410 [211s]
+  ep 10 iid=0.444 comp_attr=0.416 comp_tmpl=0.381 extrap=0.421 [419s]
+  ep 15 iid=0.383 comp_attr=0.366 comp_tmpl=0.343 extrap=0.392 [628s]
+  ep 20 iid=0.479 comp_attr=0.467 comp_tmpl=0.466 extrap=0.424 [838s]
+  ep 25 iid=0.481 comp_attr=0.468 comp_tmpl=0.456 extrap=0.416 [1049s]
+  damage iid: {'none': 0.482, 'A_perceiver': 0.468, 'B_reasoner': 0.403, 'C_interpreter': 0.461}
+[driver 07:59:58] RUN python3 scripts/run_union_cfg.py --name b6_s3 --K 8 --R 3 --seed 3 --epochs 25 --text_bridge --damage
+  core cache built [13s]
+  ep  5 iid=0.407 comp_attr=0.378 comp_tmpl=0.405 extrap=0.377 [211s]
+  ep 10 iid=0.310 comp_attr=0.310 comp_tmpl=0.349 extrap=0.257 [420s]
+  ep 15 iid=0.435 comp_attr=0.415 comp_tmpl=0.406 extrap=0.348 [629s]
+  ep 20 iid=0.470 comp_attr=0.453 comp_tmpl=0.451 extrap=0.421 [838s]
+  ep 25 iid=0.486 comp_attr=0.456 comp_tmpl=0.463 extrap=0.432 [1046s]
+  damage iid: {'none': 0.486, 'A_perceiver': 0.455, 'B_reasoner': 0.417, 'C_interpreter': 0.488}
+[driver 08:18:37] RUN python3 scripts/run_union_cfg.py --name b6_s4 --K 8 --R 3 --seed 4 --epochs 25 --text_bridge --damage
+  core cache built [13s]
+  ep  5 iid=0.433 comp_attr=0.406 comp_tmpl=0.432 extrap=0.410 [211s]
+  ep 10 iid=0.339 comp_attr=0.320 comp_tmpl=0.339 extrap=0.352 [419s]
+  ep 15 iid=0.422 comp_attr=0.411 comp_tmpl=0.388 extrap=0.393 [626s]
+  ep 20 iid=0.473 comp_attr=0.454 comp_tmpl=0.438 extrap=0.421 [834s]
+  ep 25 iid=0.474 comp_attr=0.455 comp_tmpl=0.439 extrap=0.417 [1043s]
+  damage iid: {'none': 0.475, 'A_perceiver': 0.464, 'B_reasoner': 0.347, 'C_interpreter': 0.471}
+[driver 08:37:12] RUN python3 scripts/run_union_cfg.py --name ksweep_k1_s0 --K 1 --R 3 --seed 0 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.502 comp_attr=0.484 comp_tmpl=0.454 extrap=0.453 [564s]
+[driver 08:46:57] RUN python3 scripts/run_union_cfg.py --name ksweep_k1_s1 --K 1 --R 3 --seed 1 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.504 comp_attr=0.487 comp_tmpl=0.442 extrap=0.442 [565s]
+[driver 08:56:42] RUN python3 scripts/run_union_cfg.py --name ksweep_k1_s2 --K 1 --R 3 --seed 2 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.498 comp_attr=0.479 comp_tmpl=0.453 extrap=0.450 [564s]
+[driver 09:06:26] RUN python3 scripts/run_union_cfg.py --name ksweep_k2_s0 --K 2 --R 3 --seed 0 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.503 comp_attr=0.492 comp_tmpl=0.438 extrap=0.447 [568s]
+[driver 09:16:13] RUN python3 scripts/run_union_cfg.py --name ksweep_k2_s1 --K 2 --R 3 --seed 1 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.503 comp_attr=0.494 comp_tmpl=0.447 extrap=0.449 [568s]
+[driver 09:26:01] RUN python3 scripts/run_union_cfg.py --name ksweep_k2_s2 --K 2 --R 3 --seed 2 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.510 comp_attr=0.480 comp_tmpl=0.452 extrap=0.443 [568s]
+[driver 09:35:49] RUN python3 scripts/run_union_cfg.py --name ksweep_k4_s0 --K 4 --R 3 --seed 0 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.510 comp_attr=0.486 comp_tmpl=0.461 extrap=0.448 [580s]
+[driver 09:45:49] RUN python3 scripts/run_union_cfg.py --name ksweep_k4_s1 --K 4 --R 3 --seed 1 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.504 comp_attr=0.487 comp_tmpl=0.444 extrap=0.454 [581s]
+[driver 09:55:50] RUN python3 scripts/run_union_cfg.py --name ksweep_k4_s2 --K 4 --R 3 --seed 2 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.510 comp_attr=0.482 comp_tmpl=0.444 extrap=0.449 [581s]
+[driver 10:05:52] RUN python3 scripts/run_union_cfg.py --name ksweep_k16_s0 --K 16 --R 3 --seed 0 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.511 comp_attr=0.484 comp_tmpl=0.447 extrap=0.452 [644s]
+[driver 10:16:57] RUN python3 scripts/run_union_cfg.py --name ksweep_k16_s1 --K 16 --R 3 --seed 1 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.500 comp_attr=0.485 comp_tmpl=0.437 extrap=0.453 [643s]
+[driver 10:28:01] RUN python3 scripts/run_union_cfg.py --name ksweep_k16_s2 --K 16 --R 3 --seed 2 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.505 comp_attr=0.484 comp_tmpl=0.454 extrap=0.443 [642s]
+[driver 10:39:04] RUN python3 scripts/run_union_cfg.py --name rsweep_r1_s0 --K 8 --R 1 --seed 0 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.499 comp_attr=0.481 comp_tmpl=0.453 extrap=0.446 [199s]
+[driver 10:42:41] RUN python3 scripts/run_union_cfg.py --name rsweep_r1_s1 --K 8 --R 1 --seed 1 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.501 comp_attr=0.477 comp_tmpl=0.432 extrap=0.444 [199s]
+[driver 10:46:17] RUN python3 scripts/run_union_cfg.py --name rsweep_r1_s2 --K 8 --R 1 --seed 2 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.503 comp_attr=0.480 comp_tmpl=0.443 extrap=0.431 [202s]
+[driver 10:49:55] RUN python3 scripts/run_union_cfg.py --name rsweep_r2_s0 --K 8 --R 2 --seed 0 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.514 comp_attr=0.483 comp_tmpl=0.451 extrap=0.448 [395s]
+[driver 10:56:49] RUN python3 scripts/run_union_cfg.py --name rsweep_r2_s1 --K 8 --R 2 --seed 1 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.504 comp_attr=0.489 comp_tmpl=0.439 extrap=0.442 [397s]
+[driver 11:03:44] RUN python3 scripts/run_union_cfg.py --name rsweep_r2_s2 --K 8 --R 2 --seed 2 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.501 comp_attr=0.474 comp_tmpl=0.432 extrap=0.442 [396s]
+[driver 11:10:39] RUN python3 scripts/run_union_cfg.py --name rsweep_r5_s0 --K 8 --R 5 --seed 0 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.505 comp_attr=0.481 comp_tmpl=0.450 extrap=0.449 [1053s]
+[driver 11:28:36] RUN python3 scripts/run_union_cfg.py --name rsweep_r5_s1 --K 8 --R 5 --seed 1 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.503 comp_attr=0.478 comp_tmpl=0.454 extrap=0.451 [1052s]
+[driver 11:46:33] RUN python3 scripts/run_union_cfg.py --name rsweep_r5_s2 --K 8 --R 5 --seed 2 --epochs 15 --eval_every 15
+  core cache built [13s]
+  ep 15 iid=0.506 comp_attr=0.476 comp_tmpl=0.459 extrap=0.444 [1049s]
+[driver 12:04:27] RUN python3 scripts/run_union_cfg.py --name b4drop_s1 --K 8 --R 3 --seed 1 --epochs 25 --module_dropout 0.3 --damage --eval_every 25
+  core cache built [13s]
+  ep 25 iid=0.500 comp_attr=0.482 comp_tmpl=0.442 extrap=0.441 [1014s]
+  damage iid: {'none': 0.5, 'A_perceiver': 0.499, 'B_reasoner': 0.434, 'C_interpreter': 0.501}
+[driver 12:22:33] RUN python3 scripts/run_union_cfg.py --name b4drop_s2 --K 8 --R 3 --seed 2 --epochs 25 --module_dropout 0.3 --damage --eval_every 25
+  core cache built [13s]
+  ep 25 iid=0.490 comp_attr=0.471 comp_tmpl=0.438 extrap=0.431 [1015s]
+  damage iid: {'none': 0.49, 'A_perceiver': 0.492, 'B_reasoner': 0.426, 'C_interpreter': 0.493}
+[driver 12:40:41] aggregating
+system                     n              iid        comp_attr        comp_tmpl           extrap
+------------------------------------------------------------------------------------------------
+B1 perceiver (frozen)      5   49.9 ± 0.4     47.7 ± 1.0     44.2 ± 0.3     43.7 ± 1.0  
+B1 perceiver (ft)          5   53.6 ± 0.8     50.2 ± 0.3     44.2 ± 0.5     44.5 ± 0.5  
+B2 reasoner                5   62.2 ± 2.2     61.3 ± 2.2     50.9 ± 4.7     51.6 ± 1.4  
+B3 interpreter             5   68.3 ± 0.7     67.2 ± 1.1     44.6 ± 1.6     52.5 ± 1.4  
+B4 union frozen            5   50.4 ± 0.3     47.8 ± 0.2     43.6 ± 0.5     43.4 ± 0.9  
+B4.5 union finetune        5   50.6 ± 1.2     47.9 ± 1.2     43.4 ± 0.8     44.2 ± 1.1  
+B5 union scratch           5   41.7 ± 0.5     41.2 ± 0.7     33.8 ± 7.5     38.7 ± 0.6  
+B6 text bridge             5   48.3 ± 0.6     46.3 ± 0.7     45.3 ± 0.8     42.7 ± 0.9  
+B7 ensemble (b1ft)         5   71.8 ± 1.5     71.4 ± 2.0     52.1 ± 3.7     54.8 ± 1.2  
+B7 ensemble (b1frozen)     5   71.8 ± 1.5     71.4 ± 2.0     52.5 ± 3.8     54.8 ± 1.1  
+B8 monolith                3   69.1 ± 1.5     67.3 ± 1.5     45.9 ± 0.7     59.1 ± 1.8  
+saved figures/main_results.png
+[driver 12:40:41] OVERNIGHT DRIVER COMPLETE

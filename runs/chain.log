@@ -1,0 +1,40 @@
+=== stage 1 complete; running stage 2 gate ===
+[gate] B3 solo on curriculum, 15 epochs
+  ep  5 iid=0.576 [31s]
+  ep 10 iid=0.612 [61s]
+  ep 15 iid=0.613 [92s]
+[gate] scratch union on curriculum, 15 epochs
+  ep  5 iid=0.429 [117s]
+  ep 10 iid=0.446 [235s]
+  ep 15 iid=0.470 [352s]
+
+STAGE2 GATE: B3=0.613 union=0.470 -> MARGINAL/FAIL (review)
+=== running stage 3 headline ===
+[B4 frozen union, seed 0]
+  core cache built [13s]
+  ep  5 iid=0.474 comp_attr=0.478 comp_tmpl=0.456 extrap=0.423 [171s]
+  ep 10 iid=0.491 comp_attr=0.477 comp_tmpl=0.441 extrap=0.433 [337s]
+  ep 15 iid=0.497 comp_attr=0.474 comp_tmpl=0.452 extrap=0.449 [501s]
+  ep 20 iid=0.499 comp_attr=0.471 comp_tmpl=0.440 extrap=0.445 [664s]
+  ep 25 iid=0.507 comp_attr=0.474 comp_tmpl=0.432 extrap=0.446 [830s]
+[B4 frozen union, seed 1]
+  core cache built [15s]
+  ep  5 iid=0.475 comp_attr=0.473 comp_tmpl=0.448 extrap=0.391 [165s]
+  ep 10 iid=0.493 comp_attr=0.487 comp_tmpl=0.454 extrap=0.435 [331s]
+  ep 15 iid=0.497 comp_attr=0.479 comp_tmpl=0.448 extrap=0.441 [494s]
+  ep 20 iid=0.500 comp_attr=0.477 comp_tmpl=0.436 extrap=0.432 [653s]
+  ep 25 iid=0.498 comp_attr=0.477 comp_tmpl=0.432 extrap=0.434 [819s]
+[B4 frozen union, seed 2]
+  core cache built [15s]
+  ep  5 iid=0.481 comp_attr=0.475 comp_tmpl=0.453 extrap=0.437 [168s]
+  ep 10 iid=0.501 comp_attr=0.484 comp_tmpl=0.438 extrap=0.425 [339s]
+  ep 15 iid=0.494 comp_attr=0.474 comp_tmpl=0.452 extrap=0.435 [506s]
+  ep 20 iid=0.508 comp_attr=0.480 comp_tmpl=0.450 extrap=0.445 [665s]
+  ep 25 iid=0.508 comp_attr=0.469 comp_tmpl=0.448 extrap=0.438 [829s]
+[B4 frozen union, seed 3]
+  core cache built [15s]
+  ep  5 iid=0.477 comp_attr=0.465 comp_tmpl=0.463 extrap=0.416 [167s]
+  ep 10 iid=0.498 comp_attr=0.478 comp_tmpl=0.446 extrap=0.451 [328s]
+  ep 15 iid=0.497 comp_attr=0.472 comp_tmpl=0.429 extrap=0.447 [485s]
+  ep 20 iid=0.501 comp_attr=0.480 comp_tmpl=0.442 extrap=0.441 [657s]
+=== CHAIN DONE ===

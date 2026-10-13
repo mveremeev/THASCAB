@@ -1,0 +1,10 @@
+[gate] B3 solo on curriculum, 15 epochs
+  ep  5 iid=0.576 [31s]
+  ep 10 iid=0.612 [61s]
+  ep 15 iid=0.613 [92s]
+[gate] scratch union on curriculum, 15 epochs
+  ep  5 iid=0.429 [117s]
+  ep 10 iid=0.446 [235s]
+  ep 15 iid=0.470 [352s]
+
+STAGE2 GATE: B3=0.613 union=0.470 -> MARGINAL/FAIL (review)

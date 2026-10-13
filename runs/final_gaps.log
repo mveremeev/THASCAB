@@ -1,0 +1,27 @@
+[gap 1: b8 seeds 3,4]
+[B8 seed 3]
+  ep  5 iid=0.552 comp_attr=0.543 comp_tmpl=0.429 extrap=0.457 [822s]
+  ep 10 iid=0.656 comp_attr=0.652 comp_tmpl=0.459 extrap=0.566 [1779s]
+  ep 15 iid=0.683 comp_attr=0.667 comp_tmpl=0.460 extrap=0.579 [2832s]
+  ep 20 iid=0.680 comp_attr=0.666 comp_tmpl=0.468 extrap=0.576 [3939s]
+[B8 seed 4]
+  ep  5 iid=0.530 comp_attr=0.527 comp_tmpl=0.413 extrap=0.453 [1152s]
+  ep 10 iid=0.641 comp_attr=0.640 comp_tmpl=0.446 extrap=0.504 [2133s]
+  ep 15 iid=0.681 comp_attr=0.669 comp_tmpl=0.462 extrap=0.531 [4167s]
+  ep 20 iid=0.684 comp_attr=0.667 comp_tmpl=0.459 extrap=0.542 [5956s]
+[gap 2: b4_s0 ckpt rerun for observer curve]
+  core cache built [29s]
+  ep  5 iid=0.499 comp_attr=0.485 comp_tmpl=0.460 extrap=0.430 [477s]
+  ep 10 iid=0.503 comp_attr=0.487 comp_tmpl=0.463 extrap=0.447 [953s]
+  ep 15 iid=0.502 comp_attr=0.480 comp_tmpl=0.446 extrap=0.443 [1477s]
+  ep 20 iid=0.506 comp_attr=0.484 comp_tmpl=0.439 extrap=0.438 [1960s]
+  ep 25 iid=0.509 comp_attr=0.475 comp_tmpl=0.439 extrap=0.433 [2454s]
+[gap 3: probes + observer curve]
+b4_s0 {'answer': 0.437, 'family': 0.75, 'n_obj': 0.975, 'count_red': 0.333, 'writer_id': 0.902}
+b45_s0 {'answer': 0.446, 'family': 0.712, 'n_obj': 0.985, 'count_red': 0.368, 'writer_id': 0.867}
+observer ep 5 {'epoch': 5, 'answer': 0.4442499876022339, 'family': 0.7944999933242798, 'n_obj': 0.9662500023841858, 'count_red': 0.3659999966621399, 'writer_id': 0.9435312747955322, 'writer_share': [0.04462499916553497, 0.1926562488079071, 0.7627187371253967]}
+observer ep 10 {'epoch': 10, 'answer': 0.4247500002384186, 'family': 0.7310000061988831, 'n_obj': 0.96875, 'count_red': 0.34575000405311584, 'writer_id': 0.9163125157356262, 'writer_share': [0.06843750178813934, 0.277406245470047, 0.6541562676429749]}
+observer ep 15 {'epoch': 15, 'answer': 0.42124998569488525, 'family': 0.7147499918937683, 'n_obj': 0.9732499718666077, 'count_red': 0.3452500104904175, 'writer_id': 0.9069687724113464, 'writer_share': [0.0054687499068677425, 0.2614062428474426, 0.7331249713897705]}
+observer ep 20 {'epoch': 20, 'answer': 0.3880000114440918, 'family': 0.6769999861717224, 'n_obj': 0.9629999995231628, 'count_red': 0.32600000500679016, 'writer_id': 0.870843768119812, 'writer_share': [0.009531250223517418, 0.2684375047683716, 0.7220312356948853]}
+observer ep 25 {'epoch': 25, 'answer': 0.3880000114440918, 'family': 0.6862499713897705, 'n_obj': 0.9582499861717224, 'count_red': 0.3307499885559082, 'writer_id': 0.8755624890327454, 'writer_share': [0.006656249985098839, 0.2397187501192093, 0.7536249756813049]}
+FINAL GAPS COMPLETE

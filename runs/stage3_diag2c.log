@@ -1,0 +1,13 @@
+[B: b4.5 finetune from b4_s0, bs64, uncapped]
+  ep  5 iid=0.506 comp_attr=0.490 comp_tmpl=0.466 extrap=0.451 [1107s]
+  ep 10 iid=0.525 comp_attr=0.501 comp_tmpl=0.449 extrap=0.461 [1738s]
+  damage iid: {'none': 0.525, 'A_perceiver': 0.5, 'B_reasoner': 0.451, 'C_interpreter': 0.478}
+[C: R=5]
+  core cache built [20s]
+  ep 25 iid=0.503 comp_attr=0.479 comp_tmpl=0.453 extrap=0.450 [2136s]
+  damage iid: {'none': 0.503, 'A_perceiver': 0.497, 'B_reasoner': 0.414, 'C_interpreter': 0.494}
+[D: K=16]
+  core cache built [14s]
+  ep 25 iid=0.504 comp_attr=0.483 comp_tmpl=0.449 extrap=0.447 [1073s]
+  damage iid: {'none': 0.504, 'A_perceiver': 0.509, 'B_reasoner': 0.423, 'C_interpreter': 0.471}
+DIAG2C COMPLETE
